@@ -1,4 +1,5 @@
 import React from 'react';
+import PaginationButtons from './PaginationButtons';
 
 interface ISearchResults {
   results: any;
@@ -28,6 +29,8 @@ function SearchResults({ results }: ISearchResults) {
           <p className="line-clamp-2">{result.snippet}</p>
         </div>
       ))}
+
+      <PaginationButtons />
     </div>
   );
 }

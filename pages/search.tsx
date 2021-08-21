@@ -31,10 +31,10 @@ function Search({ results }: { results: any }) {
 }
 
 export async function getServerSideProps(context: any) {
-  const useDummyData = true;
+  const useDummyData = false;
   const API_KEY = process.env.API_KEY;
   const CONTEXT_KEY = process.env.CONTEXT_KEY;
-  const startIndex = context.query.start || '0';
+  const startIndex = context.query.start || '1';
 
   //? Google API 호출 제한때문에 Mock 객체를 사용하였다.
   if (useDummyData) {
@@ -47,6 +47,7 @@ export async function getServerSideProps(context: any) {
   }
 
   try {
+    ('');
     //? Google API 호출
     const { data } = await axios.get(
       `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`
