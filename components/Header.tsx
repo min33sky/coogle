@@ -30,7 +30,7 @@ function Header() {
   );
 
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 bg-white">
       <div className="flex items-center w-full p-6">
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
