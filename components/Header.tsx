@@ -5,6 +5,10 @@ import { MicrophoneIcon, SearchIcon, XIcon } from '@heroicons/react/solid';
 import Avatar from './Avatar';
 import HeaderOptions from './HeaderOptions';
 
+/**
+ * 검색 결과 화면의 헤더
+ * @returns
+ */
 function Header() {
   const router = useRouter();
   const searchInputRef: MutableRefObject<HTMLInputElement | null> = useRef(null);
@@ -55,6 +59,7 @@ function Header() {
             Search
           </button>
         </form>
+
         <Avatar
           url="https://picjumbo.com/wp-content/uploads/the-golden-gate-bridge-sunset-1080x720.jpg"
           className="ml-auto"

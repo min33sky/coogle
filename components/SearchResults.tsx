@@ -1,4 +1,5 @@
 import React from 'react';
+import NoSearchResult from './NoSearchResult';
 import PaginationButtons from './PaginationButtons';
 
 interface ISearchResults {
@@ -6,7 +7,10 @@ interface ISearchResults {
 }
 
 function SearchResults({ results }: ISearchResults) {
-  console.log('results: ', results);
+  const {
+    searchInformation: { formattedTotalResults },
+  } = results;
+
   return (
     <div className="w-full px-3 mx-auto sm:pl-[5%] md:pl-[14%]">
       <p className="mt-3 mb-5 text-base text-gray-600">
@@ -30,7 +34,9 @@ function SearchResults({ results }: ISearchResults) {
         </div>
       ))}
 
-      <PaginationButtons />
+      {formattedTotalResults === '0' && <NoSearchResult />}
+
+      {formattedTotalResults !== '0' && <PaginationButtons />}
     </div>
   );
 }

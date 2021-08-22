@@ -36,7 +36,7 @@ function Home() {
       </Head>
 
       {/* Header */}
-      <header className="flex justify-between w-full p-5 text-sm text-gray-700 justify">
+      <header className="flex justify-between w-full p-5 text-sm text-gray-700">
         {/* Left */}
         <div className="flex items-center space-x-4">
           <p className="link">About</p>
@@ -60,7 +60,7 @@ function Home() {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
           height={100}
           width={300}
-          alt="logo"
+          alt="google_logo"
         />
         <div className="flex items-center w-full max-w-md px-5 py-3 mt-5 border border-gray-200 rounded-full lg:max-w-2xl sm:max-w-xl hover:shadow-lg focus-within:shadow-lg">
           <SearchIcon className="h-5 mr-3 text-gray-500" />

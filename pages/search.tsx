@@ -14,6 +14,8 @@ import ResponseMock from '../Response';
 function Search({ results }: { results: any }) {
   const router = useRouter();
 
+  // console.log('results: ', results);
+
   return (
     <div>
       <Head>
@@ -31,7 +33,7 @@ function Search({ results }: { results: any }) {
 }
 
 export async function getServerSideProps(context: any) {
-  const useDummyData = false;
+  const useDummyData = true;
   const API_KEY = process.env.API_KEY;
   const CONTEXT_KEY = process.env.CONTEXT_KEY;
   const startIndex = context.query.start || '1';
